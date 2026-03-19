@@ -1,0 +1,694 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Double Focus — Films de mariage cinématiques</title>
+    <meta
+      name="description"
+      content="Double Focus — Deux frères vidéastes spécialisés dans les films de mariage cinématiques 6 à 8 min. Paris & toute la France."
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Outfit:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- ============================================================
+       NAVIGATION
+  ============================================================ -->
+    <nav id="navbar">
+      <a href="#hero" class="nav-logo">
+        <img src="images/logo.png" alt="Double Focus" style="height: 24px" />
+      </a>
+      <ul class="nav-links">
+        <li><a href="#films">Films</a></li>
+        <li><a href="#about">À propos</a></li>
+        <li><a href="#pricing">Tarifs</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="nav-cta" onclick="scrollTo('contact')">Réserver</button>
+    </nav>
+
+    <!-- ============================================================
+       HERO
+  ============================================================ -->
+    <section class="hero" id="hero">
+      <div class="hero-bg">
+        <!--
+        VOTRE VIDÉO EN FOND (optionnel) :
+        Remplacez "videos/showreel.mp4" par votre vrai fichier
+        Pour l'instant un fond sombre est affiché
+      -->
+        <video autoplay muted loop playsinline class="hero-video">
+          <source src="videos/showreel.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          <span>Films cinématiques de mariage · Paris & France</span>
+        </div>
+        <h1 class="hero-title">Double<br /><em>Focus</em></h1>
+        <p class="hero-claim">Vos émotions. Notre cinéma. Pour toujours.</p>
+        <div class="hero-actions">
+          <button
+            class="btn-gold"
+            onclick="
+              document
+                .getElementById('pricing')
+                .scrollIntoView({ behavior: 'smooth' })
+            "
+          >
+            Offre de lancement −60 %
+          </button>
+          <button
+            class="btn-outline"
+            onclick="
+              document
+                .getElementById('films')
+                .scrollIntoView({ behavior: 'smooth' })
+            "
+          >
+            Voir nos films
+          </button>
+        </div>
+      </div>
+
+      <div class="hero-scroll">
+        <span>Scroll</span>
+        <div class="scroll-bar"></div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+       BANNIÈRE URGENCE
+  ============================================================ -->
+    <div class="urgency-banner">
+      <div class="urgency-left">
+        <span class="urgency-icon">🎬</span>
+        <div>
+          <h3>
+            Offre de lancement — <em>−60 % pour les 5 premiers couples</em>
+          </h3>
+          <p>
+            Places limitées · Tarifs réduits pour constituer notre portfolio ·
+            Sans compromis sur la qualité
+          </p>
+        </div>
+      </div>
+      <div class="urgency-right">
+        <span class="urgency-label">Places restantes</span>
+        <div class="slots">
+          <!-- ✏️ Modifiez la classe "taken" selon les vraies places prises -->
+          <div class="slot taken"></div>
+          <div class="slot taken"></div>
+          <div class="slot taken"></div>
+          <div class="slot open"></div>
+          <div class="slot open"></div>
+        </div>
+        <button
+          class="btn-gold-sm"
+          onclick="
+            document
+              .getElementById('contact')
+              .scrollIntoView({ behavior: 'smooth' })
+          "
+        >
+          Réserver ma place
+        </button>
+      </div>
+    </div>
+
+    <!-- ============================================================
+       FILMS / PORTFOLIO
+  ============================================================ -->
+    <section class="films-section" id="films">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">Notre spécialité</span>
+          <h2>Des films qui font<br /><em>battre le cœur</em></h2>
+          <div class="gold-line"></div>
+          <p class="section-desc">
+            Nous créons des courts-métrages cinématiques de 6 à 8 minutes qui
+            racontent votre histoire avec la même exigence qu'un film. Deux
+            réalisateurs, deux angles, une émotion.
+          </p>
+        </div>
+
+        <div class="films-grid">
+
+  <!-- VOTRE VRAI FILM -->
+  <div class="film-main">
+    <div class="film-thumb" onclick="openVideo('https://www.youtube.com/embed/14lZITiJb5k')">
+      <img src="images/film-main.jpg" alt="Film principal" class="thumb-img" onerror="this.style.display='none'">
+      <div class="play-btn">
+        <svg width="20" height="22" viewBox="0 0 20 22"><path d="M1 1L19 11L1 21V1Z" fill="rgba(201,169,110,0.9)"/></svg>
+      </div>
+    </div>
+    <div class="film-info">
+      <h3>Deux cœurs, une promesse — Manoir de Sainte Marie</h3>
+      <p>28/05/2025 · Pays de la loire</p>
+      <div class="film-specs">
+        <span>7 min 29</span>
+        <span>4K cinématique</span>
+        <span>Bande originale</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- LISTE — slots "Et si c'était le vôtre ?" -->
+  <div class="films-list">
+
+    <div class="film-item" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+      <div class="fi-thumb" style="background:var(--dark-4);border:1px solid var(--border);display:flex;align-items:center;justify-content:center">
+        <span style="font-size:1.2rem;opacity:0.4">+</span>
+      </div>
+      <div class="film-item-info">
+        <h4 style="color:var(--gold)">Et si c'était le vôtre ?</h4>
+        <p>2 places restantes à −60 %</p>
+      </div>
+      <span class="film-duration" style="color:var(--gold)">→</span>
+    </div>
+
+    <div class="film-item" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+      <div class="fi-thumb" style="background:var(--dark-4);border:1px solid var(--border);display:flex;align-items:center;justify-content:center">
+        <span style="font-size:1.2rem;opacity:0.4">+</span>
+      </div>
+      <div class="film-item-info">
+        <h4 style="color:var(--gold)">Et si c'était le vôtre ?</h4>
+        <p>Réservez votre date</p>
+      </div>
+      <span class="film-duration" style="color:var(--gold)">→</span>
+    </div>
+
+    <div class="film-item" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+      <div class="fi-thumb" style="background:var(--dark-4);border:1px solid var(--border);display:flex;align-items:center;justify-content:center">
+        <span style="font-size:1.2rem;opacity:0.4">+</span>
+      </div>
+      <div class="film-item-info">
+        <h4 style="color:var(--gold)">Et si c'était le vôtre ?</h4>
+        <p>Profitez de l'offre lancement</p>
+      </div>
+      <span class="film-duration" style="color:var(--gold)">→</span>
+    </div>
+
+    <div class="film-item" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+      <div class="fi-thumb" style="background:var(--dark-4);border:1px solid var(--border);display:flex;align-items:center;justify-content:center">
+        <span style="font-size:1.2rem;opacity:0.4">+</span>
+      </div>
+      <div class="film-item-info">
+        <h4 style="color:var(--gold)">Et si c'était le vôtre ?</h4>
+        <p>Toute la France · −60 % lancement</p>
+      </div>
+      <span class="film-duration" style="color:var(--gold)">→</span>
+    </div>
+
+  </div>
+</div>
+
+            
+
+            
+
+            
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MODAL VIDÉO -->
+    <div class="video-modal" id="videoModal" onclick="closeVideo()">
+      <div class="modal-inner" onclick="event.stopPropagation()">
+        <button class="modal-close" onclick="closeVideo()">✕</button>
+        <iframe id="videoFrame" src="" allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <!-- ============================================================
+       À PROPOS
+  ============================================================ -->
+    <section class="about-section" id="about">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-text">
+            <span class="eyebrow">Notre histoire</span>
+            <h2>Deux frères,<br />un seul <em>langage</em></h2>
+            <div class="gold-line"></div>
+            <!-- ✏️ Personnalisez ce texte -->
+            <p>
+              Nous sommes deux frères cinéastes, passionnés par l'image et
+              l'émotion vraie. Notre double regard nous permet de capturer
+              simultanément les deux côtés de chaque instant — ce que voit l'un,
+              l'autre le ressent.
+            </p>
+            <p>
+              Chaque film que nous créons est unique : une narration visuelle
+              soignée, un étalonnage cinématique, une musique choisie avec vous.
+              Pas un simple enregistrement — une œuvre.
+            </p>
+
+            <div class="stats-grid">
+              <div class="stat">
+                <span class="stat-num">2</span>
+                <span class="stat-label">Réalisateurs présents</span>
+              </div>
+              <div class="stat">
+                <span class="stat-num">6–8</span>
+                <span class="stat-label">Minutes de film livré</span>
+              </div>
+              <div class="stat">
+                <span class="stat-num">4K</span>
+                <span class="stat-label">Qualité cinématique</span>
+              </div>
+              <div class="stat">
+                <span class="stat-num">∞</span>
+                <span class="stat-label">Pour la vie</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-photo">
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+    <div>
+      <img src="images/yanis.jpg" alt="Yanis — Double Focus" style="width:100%;aspect-ratio:3/4;object-fit:cover;border:1px solid var(--border);">
+      <div style="text-align:center;margin-top:0.8rem">
+        <span style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:300;color:var(--gold)">Yanis</span>
+        <span style="display:block;font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted)">Réalisateur</span>
+      </div>
+    </div>
+    <div style="margin-top:3rem">
+      <img src="images/hedy.jpg" alt="Hedy — Double Focus" style="width:100%;aspect-ratio:3/4;object-fit:cover;border:1px solid var(--border);">
+      <div style="text-align:center;margin-top:0.8rem">
+        <span style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:300;color:var(--gold)">Hedy</span>
+        <span style="display:block;font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted)">Réalisateur</span>
+      </div>
+      <div style="margin-top:0.8rem;background:var(--dark-4);border:1px solid var(--border);padding:0.8rem 1rem">
+        <span style="font-size:0.63rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);display:block">Notre spécialité</span>
+        <strong style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:300;color:var(--gold)">Film cinématique</strong>
+      </div>
+    </div>
+  </div>
+</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+       PROCESSUS
+  ============================================================ -->
+    <section class="process-section">
+      <div class="container">
+        <div class="section-header centered">
+          <span class="eyebrow">Comment ça se passe</span>
+          <h2>De la rencontre<br />au <em>chef-d'œuvre</em></h2>
+        </div>
+        <div class="process-steps">
+          <div class="step">
+            <div class="step-num">01</div>
+            <h3>Appel découverte</h3>
+            <p>
+              On échange sur votre vision, votre lieu, votre histoire. On
+              apprend à vous connaître pour mieux vous filmer.
+            </p>
+          </div>
+          <div class="step-arrow">→</div>
+          <div class="step">
+            <div class="step-num">02</div>
+            <h3>Préparation</h3>
+            <p>
+              Repérage du lieu, sélection musicale avec vous, planning de
+              tournage. Rien n'est laissé au hasard.
+            </p>
+          </div>
+          <div class="step-arrow">→</div>
+          <div class="step">
+            <div class="step-num">03</div>
+            <h3>Le grand jour</h3>
+            <p>
+              Deux caméras, deux regards discrets. On capture chaque émotion
+              sans jamais interrompre la magie.
+            </p>
+          </div>
+          <div class="step-arrow">→</div>
+          <div class="step">
+            <div class="step-num">04</div>
+            <h3>Post-production</h3>
+            <p>
+              Montage narratif, étalonnage cinématique, mixage son. Votre film
+              est livré sous 6 semaines.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+       TARIFS
+  ============================================================ -->
+    <section class="pricing-section" id="pricing">
+      <div class="container">
+        <div class="section-header centered">
+          <span class="eyebrow">Investissement</span>
+          <h2>Nos <em>formules</em></h2>
+          <p class="pricing-note">
+            Offre de lancement : <em>−60 % pour les 5 premiers couples</em> · 3
+            places déjà prises
+          </p>
+        </div>
+
+        <div class="pricing-grid">
+          <!-- FORMULE 1 -->
+          <div class="price-card">
+            <div class="price-tier">Film</div>
+            <div class="price-name">L'Essentiel</div>
+            <div class="price-amounts">
+              <!-- ✏️ Modifiez les prix selon vos vrais tarifs -->
+              <span class="price-original">1 500 €</span>
+              <span class="price-now">600 €</span>
+            </div>
+            <div class="price-sub">au lieu de 1 500 € · offre lancement</div>
+            <div class="price-badge">−60 %</div>
+            <ul class="features">
+              <li>Film cinématique <strong>6 min</strong></li>
+              <li>2 réalisateurs toute la journée</li>
+              <li>Cérémonie + cocktail</li>
+              <li>Étalonnage cinématique</li>
+              <li>Musique licenciée</li>
+              <li>Livraison clé USB + lien privé</li>
+            </ul>
+            <button
+              class="btn-card"
+              onclick="
+                document
+                  .getElementById('contact')
+                  .scrollIntoView({ behavior: 'smooth' })
+              "
+            >
+              Réserver cette formule
+            </button>
+          </div>
+
+          <!-- FORMULE 2 — LA PLUS DEMANDÉE -->
+          <div class="price-card featured">
+            <div class="featured-label">⭐ Le plus demandé</div>
+            <div class="price-tier">Film + Photos</div>
+            <div class="price-name">Le Signature</div>
+            <div class="price-amounts">
+              <span class="price-original">2 800 €</span>
+              <span class="price-now">1 120 €</span>
+            </div>
+            <div class="price-sub">au lieu de 2 800 € · offre lancement</div>
+            <div class="price-badge">−60 %</div>
+            <ul class="features">
+              <li>Film cinématique <strong>6–8 min</strong></li>
+              <li>2 réalisateurs — journée complète</li>
+              <li>Cérémonie + cocktail + soirée</li>
+              <li><strong>200 photos retouchées incluses</strong></li>
+              <li>Bande son sur mesure</li>
+              <li>Teaser 90 sec pour les réseaux</li>
+              <li>Livraison clé USB + galerie privée</li>
+            </ul>
+            <button
+              class="btn-card"
+              onclick="
+                document
+                  .getElementById('contact')
+                  .scrollIntoView({ behavior: 'smooth' })
+              "
+            >
+              Réserver cette formule
+            </button>
+          </div>
+
+          <!-- FORMULE 3 -->
+          <div class="price-card">
+            <div class="price-tier">Film Prestige</div>
+            <div class="price-name">L'Éternité</div>
+            <div class="price-amounts">
+              <span class="price-original">4 000 €</span>
+              <span class="price-now">1 600 €</span>
+            </div>
+            <div class="price-sub">au lieu de 4 000 € · offre lancement</div>
+            <div class="price-badge">−60 %</div>
+            <ul class="features">
+              <li>Film cinématique <strong>8 min</strong></li>
+              <li>2 réalisateurs — 2 jours (J–1 + jour J)</li>
+              <li>Couverture intégrale</li>
+              <li><strong>300 photos retouchées incluses</strong></li>
+              <li>Musique originale composée</li>
+              <li>Teaser + version courte réseaux</li>
+              <li>Album photo 30×30 cm offert</li>
+            </ul>
+            <button
+              class="btn-card"
+              onclick="
+                document
+                  .getElementById('contact')
+                  .scrollIntoView({ behavior: 'smooth' })
+              "
+            >
+              Réserver cette formule
+            </button>
+          </div>
+        </div>
+
+        <p class="slots-note">
+          Offre valable uniquement pour les
+          <strong>5 premiers couples</strong> · Après, retour aux tarifs normaux
+          · <strong>3 places déjà prises, 2 restantes</strong>
+        </p>
+      </div>
+    </section>
+
+    <!-- ============================================================
+       CONTACT / FORMULAIRE
+  ============================================================ -->
+    <section class="contact-section" id="contact">
+      <div class="container">
+        <div class="section-header centered">
+          <span class="eyebrow">Parlons de votre film</span>
+          <h2>Réservez votre <em>date</em></h2>
+        </div>
+
+        <form class="form-wrap" id="contact-form">
+          <div class="promo-bar">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C9A96E" stroke-width="1.5">
+    <circle cx="12" cy="12" r="10" />
+    <line x1="12" y1="8" x2="12" y2="13" />
+    <circle cx="12" cy="16" r="0.8" fill="#C9A96E" />
+  </svg>
+  <p><strong>Offre −60 %</strong> · Il reste 2 places sur 5. Réservez maintenant pour en bénéficier.</p>
+</div>
+
+<!-- INDICATEUR D'ÉTAPES -->
+<div class="steps-nav">
+  <div class="step-dot active" id="dot-0"><span class="dot-num">1</span><span class="dot-label">Vous</span></div>
+  <div class="step-line" id="line-0"></div>
+  <div class="step-dot" id="dot-1"><span class="dot-num">2</span><span class="dot-label">Mariage</span></div>
+  <div class="step-line" id="line-1"></div>
+  <div class="step-dot" id="dot-2"><span class="dot-num">3</span><span class="dot-label">Le film</span></div>
+  <div class="step-line" id="line-2"></div>
+  <div class="step-dot" id="dot-3"><span class="dot-num">4</span><span class="dot-label">Message</span></div>
+</div>
+
+<!-- ÉTAPE 1 : VOUS -->
+<div class="form-step active" id="step-0">
+  <p class="step-title">Faisons connaissance</p>
+  <div class="fields-grid">
+    <div class="field">
+      <label>Prénom mariée <span class="req">*</span></label>
+      <input type="text" name="prenom_mariee" placeholder="Sophie">
+    </div>
+    <div class="field">
+      <label>Prénom marié <span class="req">*</span></label>
+      <input type="text" name="prenom_marie" placeholder="Thomas">
+    </div>
+    <div class="field">
+      <label>Email <span class="req">*</span></label>
+      <input type="email" name="email" placeholder="votre@email.com">
+    </div>
+    <div class="field">
+      <label>Téléphone</label>
+      <input type="tel" name="telephone" placeholder="06 00 00 00 00">
+    </div>
+    <div class="field field-full">
+      <label>Date du mariage <span class="req">*</span></label>
+      <input type="date" name="date_mariage">
+    </div>
+  </div>
+  <p class="step-title" style="margin-top:1.5rem">Comment nous avez-vous trouvés ?</p>
+  <div class="radio-group">
+    <label class="radio-opt"><input type="radio" name="source" value="Instagram"> Instagram</label>
+    <label class="radio-opt"><input type="radio" name="source" value="Bouche à oreille"> Bouche à oreille</label>
+    <label class="radio-opt"><input type="radio" name="source" value="Google"> Google</label>
+    <label class="radio-opt"><input type="radio" name="source" value="Autre"> Autre</label>
+  </div>
+  <div class="btn-row">
+    <button type="button" class="btn-next" onclick="goStep(1)">Continuer →</button>
+  </div>
+</div>
+
+<!-- ÉTAPE 2 : MARIAGE -->
+<div class="form-step" id="step-1">
+  <p class="step-title">Votre mariage</p>
+  <div class="fields-grid">
+    <div class="field">
+      <label>Lieu de cérémonie <span class="req">*</span></label>
+      <input type="text" name="lieu_ceremonie" placeholder="Église, mairie, lieu laïque…">
+    </div>
+    <div class="field">
+      <label>Lieu de réception <span class="req">*</span></label>
+      <input type="text" name="lieu_reception" placeholder="Château, domaine, salle…">
+    </div>
+    <div class="field">
+      <label>Ville / Région <span class="req">*</span></label>
+      <input type="text" name="ville" placeholder="Paris, Bordeaux, Provence…">
+    </div>
+    <div class="field">
+      <label>Nombre d'invités <span class="req">*</span></label>
+      <select name="nombre_invites">
+        <option value="">Sélectionner…</option>
+        <option>Moins de 30 personnes</option>
+        <option>30 à 60 personnes</option>
+        <option>60 à 100 personnes</option>
+        <option>100 à 150 personnes</option>
+        <option>Plus de 150 personnes</option>
+      </select>
+    </div>
+  </div>
+  <p class="step-title" style="margin-top:1.5rem">Type de cérémonie</p>
+  <div class="radio-group">
+    <label class="radio-opt"><input type="radio" name="type_ceremonie" value="Religieuse"> Religieuse</label>
+    <label class="radio-opt"><input type="radio" name="type_ceremonie" value="Laïque"> Laïque</label>
+    <label class="radio-opt"><input type="radio" name="type_ceremonie" value="Civile uniquement"> Civile uniquement</label>
+    <label class="radio-opt"><input type="radio" name="type_ceremonie" value="Les deux"> Les deux</label>
+  </div>
+  <p class="step-title" style="margin-top:1.5rem">Vous avez déjà prévu</p>
+  <div class="check-group">
+    <label class="check-opt"><input type="checkbox" name="prestataires" value="Photographe"> Photographe</label>
+    <label class="check-opt"><input type="checkbox" name="prestataires" value="Wedding planner"> Wedding planner</label>
+    <label class="check-opt"><input type="checkbox" name="prestataires" value="DJ / Orchestre"> DJ / Orchestre</label>
+    <label class="check-opt"><input type="checkbox" name="prestataires" value="Fleuriste"> Fleuriste</label>
+  </div>
+  <div class="btn-row">
+    <button type="button" class="btn-prev" onclick="goStep(0)">← Retour</button>
+    <button type="button" class="btn-next" onclick="goStep(2)">Continuer →</button>
+  </div>
+</div>
+
+<!-- ÉTAPE 3 : LE FILM -->
+<div class="form-step" id="step-2">
+  <p class="step-title">Votre film</p>
+  <div class="fields-grid">
+    <div class="field field-full">
+      <label>Formule souhaitée <span class="req">*</span></label>
+      <select name="formule">
+        <option value="">Sélectionner…</option>
+        <option>L'Essentiel — Film 6 min · 600 € (−60 %)</option>
+        <option>Le Signature — Film + Photos · 1 120 € (−60 %)</option>
+        <option>L'Éternité — Film prestige 8 min · 1 600 € (−60 %)</option>
+        <option>Je ne sais pas encore, j'aimerais des conseils</option>
+      </select>
+    </div>
+  </div>
+  <p class="step-title" style="margin-top:1.5rem">Ambiance du film</p>
+  <div class="radio-group">
+    <label class="radio-opt"><input type="radio" name="ambiance" value="Romantique & poétique"> Romantique & poétique</label>
+    <label class="radio-opt"><input type="radio" name="ambiance" value="Épique & cinématique"> Épique & cinématique</label>
+    <label class="radio-opt"><input type="radio" name="ambiance" value="Joyeux & spontané"> Joyeux & spontané</label>
+    <label class="radio-opt"><input type="radio" name="ambiance" value="Intimiste & discret"> Intimiste & discret</label>
+  </div>
+  <p class="step-title" style="margin-top:1.5rem">Ce qui compte le plus pour vous</p>
+  <div class="check-group">
+    <label class="check-opt"><input type="checkbox" name="priorites" value="Les vœux & la cérémonie"> Les vœux & la cérémonie</label>
+    <label class="check-opt"><input type="checkbox" name="priorites" value="Les préparatifs"> Les préparatifs</label>
+    <label class="check-opt"><input type="checkbox" name="priorites" value="Le cocktail & les invités"> Le cocktail & les invités</label>
+    <label class="check-opt"><input type="checkbox" name="priorites" value="La soirée & la fête"> La soirée & la fête</label>
+    <label class="check-opt"><input type="checkbox" name="priorites" value="Les portraits du couple"> Les portraits du couple</label>
+    <label class="check-opt"><input type="checkbox" name="priorites" value="Les détails & déco"> Les détails & déco</label>
+  </div>
+  <div class="btn-row">
+    <button type="button" class="btn-prev" onclick="goStep(1)">← Retour</button>
+    <button type="button" class="btn-next" onclick="goStep(3)">Continuer →</button>
+  </div>
+</div>
+
+<!-- ÉTAPE 4 : MESSAGE -->
+<div class="form-step" id="step-3">
+  <p class="step-title">Pour finir</p>
+  <div class="fields-grid">
+    <div class="field field-full">
+      <label>Votre histoire</label>
+      <textarea rows="4" name="histoire" placeholder="Racontez-nous comment vous vous êtes rencontrés, ce qui rend votre mariage unique…"></textarea>
+    </div>
+    <div class="field field-full">
+      <label>Références de films qui vous inspirent</label>
+      <textarea rows="3" name="references_films" placeholder="Liens YouTube, Instagram, noms de vidéastes que vous aimez…"></textarea>
+    </div>
+    
+  </div>
+  <div class="btn-row">
+    <button type="button" class="btn-prev" onclick="goStep(2)">← Retour</button>
+    <button type="submit" class="btn-submit">Envoyer ma demande 🎬</button>
+  </div>
+</div>
+
+<!-- CONFIRMATION -->
+<div class="form-success" id="formSuccess">
+  <div class="success-icon">✓</div>
+  <h3>Merci pour votre <em>confiance</em></h3>
+  <div class="gold-line" style="margin:1.5rem auto"></div>
+  <p>Nous avons bien reçu votre demande.<br>
+  Nous vous répondons sous 48h pour discuter de votre film de mariage.<br><br>
+  En attendant, retrouvez nos travaux sur <strong>@doublefocus_</strong></p>
+</div>
+        </form>
+
+        <!-- INFOS DE CONTACT -->
+        <div class="contact-info">
+          <div class="ci-item">
+            <span class="ci-label">Email</span>
+            <!-- ✏️ Votre vrai email -->
+            <span class="ci-val">contact@doublefocus.fr</span>
+          </div>
+          <div class="ci-item">
+            <span class="ci-label">Instagram</span>
+            <a
+              href="https://instagram.com/doublefocus_"
+              target="_blank"
+              class="ci-val"
+              >@doublefocus_</a
+            >
+          </div>
+          <div class="ci-item">
+            <span class="ci-label">Zone</span>
+            <span class="ci-val">Paris & toute la France</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+    <footer>
+  <div class="footer-inner">
+    <div class="footer-logo">Double Focus</div>
+    <div class="footer-links">
+      <a href="https://instagram.com/doublefocus_" target="_blank">@doublefocus_</a>
+      <span class="footer-sep">·</span>
+      <a href="tel:+33600000001">06 00 00 00 01</a>
+      <span class="footer-sep">·</span>
+      <a href="tel:+33600000002">06 60 32 18 40</a>
+    </div>
+    <span class="footer-copy">© 2025 Double Focus — Films de mariage cinématiques</span>
+  </div>
+</footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
