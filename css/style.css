@@ -1395,3 +1395,45 @@ footer {
     padding: 2rem;
   }
 }
+.pricing-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+  margin-top: 4rem;
+}
+.pricing-left h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2.5rem;
+  font-weight: 300;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+.pricing-left h3 em {
+  font-style: italic;
+  color: var(--gold);
+}
+.pricing-left p {
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.9;
+  margin-bottom: 1.5rem;
+}
+.pricing-quote {
+  border-left: 2px solid var(--gold);
+  padding-left: 1.5rem;
+  margin-top: 2rem;
+}
+.pricing-quote p {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: var(--gold);
+  font-style: italic;
+}
+@media (max-width: 900px) {
+  .pricing-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
