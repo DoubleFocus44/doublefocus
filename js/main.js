@@ -20,7 +20,31 @@ window.addEventListener("scroll", () => {
 /* --- FORMULAIRE MULTI-ÉTAPES --- */
 let currentStep = 0;
 
+// Champs obligatoires par étape
+const requiredFields = {
+  0: ["prenom_mariee", "prenom_marie", "email", "telephone", "date_mariage"],
+  1: ["lieu_ceremonie", "lieu_reception", "ville", "nombre_invites"],
+  2: ["formule"],
+};
+
+function validateStep(step) {
+  const fields = requiredFields[step];
+  if (!fields) return true;
+  let valid = true;
+  fields.forEach((name) => {
+    const el = document.querySelector(`[name="${name}"]`);
+    if (!el) return;
+    const empty = !el.value.trim();
+    el.style.borderColor = empty ? "#c0392b" : "";
+    if (empty) valid = false;
+  });
+  return valid;
+}
+
 function goStep(n) {
+  // Valider avant d'avancer
+  if (n > currentStep && !validateStep(currentStep)) return;
+
   // Cacher l'étape actuelle
   document.getElementById("step-" + currentStep).classList.remove("active");
   document.getElementById("dot-" + currentStep).classList.remove("active");

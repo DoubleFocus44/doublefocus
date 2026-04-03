@@ -33,7 +33,7 @@
         <li><a href="#pricing">Tarifs</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-      <button class="nav-cta" onclick="scrollTo('contact')">Réserver</button>
+      <button class="nav-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Réserver</button>
     </nav>
 
     <!-- ============================================================
@@ -165,53 +165,23 @@
     </div>
   </div>
 
-  <!-- LISTE — slots "Et si c'était le vôtre ?" -->
-  <div class="films-list">
-
-    <div class="film-item" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
-      <div class="fi-thumb" style="background:var(--dark-4);border:1px solid var(--border);display:flex;align-items:center;justify-content:center">
-        <span style="font-size:1.2rem;opacity:0.4">+</span>
+  <!-- FAUSSE VIDÉO 2 (remplacer images/film-2.jpg par votre miniature) -->
+  <div class="film-main" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})" style="cursor:pointer">
+    <div class="film-thumb">
+      <img src="images/film-2.jpg" alt="Film mariage 2" class="thumb-img" onerror="this.style.display='none'">
+      <div class="play-btn">
+        <svg width="20" height="22" viewBox="0 0 20 22"><path d="M1 1L19 11L1 21V1Z" fill="rgba(201,169,110,0.9)"/></svg>
       </div>
-      <div class="film-item-info">
-        <h4 style="color:var(--gold)">Et si c'était le vôtre ?</h4>
-        <p>2 places restantes à −60 %</p>
-      </div>
-      <span class="film-duration" style="color:var(--gold)">→</span>
     </div>
-
-    <div class="film-item" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
-      <div class="fi-thumb" style="background:var(--dark-4);border:1px solid var(--border);display:flex;align-items:center;justify-content:center">
-        <span style="font-size:1.2rem;opacity:0.4">+</span>
+    <div class="film-info">
+      <h3>Votre mariage pourrait être ici</h3>
+      <p>2 places disponibles · Offre lancement −60 %</p>
+      <div class="film-specs">
+        <span>Film 6 à 8 min</span>
+        <span>4K cinématique</span>
+        <span>Toute la France</span>
       </div>
-      <div class="film-item-info">
-        <h4 style="color:var(--gold)">Et si c'était le vôtre ?</h4>
-        <p>Réservez votre date</p>
-      </div>
-      <span class="film-duration" style="color:var(--gold)">→</span>
     </div>
-
-    <div class="film-item" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
-      <div class="fi-thumb" style="background:var(--dark-4);border:1px solid var(--border);display:flex;align-items:center;justify-content:center">
-        <span style="font-size:1.2rem;opacity:0.4">+</span>
-      </div>
-      <div class="film-item-info">
-        <h4 style="color:var(--gold)">Et si c'était le vôtre ?</h4>
-        <p>Profitez de l'offre lancement</p>
-      </div>
-      <span class="film-duration" style="color:var(--gold)">→</span>
-    </div>
-
-    <div class="film-item" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
-      <div class="fi-thumb" style="background:var(--dark-4);border:1px solid var(--border);display:flex;align-items:center;justify-content:center">
-        <span style="font-size:1.2rem;opacity:0.4">+</span>
-      </div>
-      <div class="film-item-info">
-        <h4 style="color:var(--gold)">Et si c'était le vôtre ?</h4>
-        <p>Toute la France · −60 % lancement</p>
-      </div>
-      <span class="film-duration" style="color:var(--gold)">→</span>
-    </div>
-
   </div>
 </div>
 
@@ -464,7 +434,7 @@
       <input type="email" name="email" placeholder="votre@email.com">
     </div>
     <div class="field">
-      <label>Téléphone</label>
+      <label>Téléphone <span class="req">*</span></label>
       <input type="tel" name="telephone" placeholder="06 00 00 00 00">
     </div>
     <div class="field field-full">
@@ -540,10 +510,7 @@
       <label>Formule souhaitée <span class="req">*</span></label>
       <select name="formule">
         <option value="">Sélectionner…</option>
-        <option>L'Essentiel — Film 6 min · 600 € (−60 %)</option>
-        <option>Le Signature — Film + Photos · 1 120 € (−60 %)</option>
-        <option>L'Éternité — Film prestige 8 min · 1 600 € (−60 %)</option>
-        <option>Je ne sais pas encore, j'aimerais des conseils</option>
+        <option>L'Expérience Cinématique — Film 6 à 8 min · 600 € (−63 %)</option>
       </select>
     </div>
   </div>
@@ -631,11 +598,9 @@
   <div class="footer-inner">
     <div class="footer-logo">Double Focus</div>
     <div class="footer-links">
-      <a href="https://instagram.com/doublefocus_" target="_blank">@doublefocus_</a>
-      <span class="footer-sep">·</span>
       <a href="tel:+33600000001">06 62 28 77 74</a>
-      <span class="footer-sep">·</span>
       <a href="tel:+33600000002">06 60 32 18 40</a>
+      <a href="https://instagram.com/doublefocus_" target="_blank">@doublefocus_</a>
     </div>
     <span class="footer-copy">© 2025 Double Focus — Films de mariage cinématiques</span>
   </div>
