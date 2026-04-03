@@ -71,10 +71,6 @@ function goStep(n) {
   document.getElementById("step-" + currentStep).classList.add("active");
   document.getElementById("dot-" + currentStep).classList.add("active");
 
-  // Scroll vers le formulaire
-  document
-    .getElementById("contact")
-    .scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
 async function submitForm() {
