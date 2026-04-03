@@ -1344,57 +1344,6 @@ footer {
     top: 100%;
   }
 }
-
-/* ============================================================
-   RESPONSIVE
-============================================================ */
-@media (max-width: 900px) {
-  #navbar {
-    padding: 1.2rem 1.5rem;
-  }
-  .nav-logo img {
-    height: 18px;
-  }
-  .nav-links {
-    display: none;
-  }
-  .films-grid,
-  .about-grid {
-    grid-template-columns: 1fr;
-    gap: 3rem;
-  }
-  .about-photo {
-    display: none;
-  }
-  .process-steps {
-    grid-template-columns: 1fr;
-  }
-  .step-arrow {
-    display: none;
-  }
-  .pricing-grid {
-    grid-template-columns: 1fr;
-  }
-  .urgency-banner {
-    flex-direction: column;
-    padding: 1.5rem;
-  }
-  .fields-grid {
-    grid-template-columns: 1fr;
-  }
-  .radio-group,
-  .check-group {
-    grid-template-columns: 1fr;
-  }
-  .field-full {
-    grid-column: 1;
-  }
-  footer {
-    flex-direction: column;
-    text-align: center;
-    padding: 2rem;
-  }
-}
 .pricing-layout {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1431,9 +1380,59 @@ footer {
   color: var(--gold);
   font-style: italic;
 }
+
+/* ============================================================
+   RESPONSIVE
+============================================================ */
 @media (max-width: 900px) {
+  #navbar {
+    padding: 1.2rem 1.5rem;
+  }
+  .nav-logo img {
+    height: 18px;
+  }
   .pricing-layout {
     grid-template-columns: 1fr;
     gap: 2rem;
+  }
+  .nav-links {
+    display: none;
+  }
+  .films-grid,
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .about-photo {
+    display: none;
+  }
+  .process-steps {
+    grid-template-columns: 1fr;
+  }
+  .step-arrow {
+    display: none;
+  }
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .urgency-banner {
+    flex-direction: column;
+    padding: 1.5rem;
+  }
+  .fields-grid {
+    grid-template-columns: 1fr;
+  }
+  .radio-group,
+  .check-group {
+    grid-template-columns: 1fr;
+  }
+  .field-full {
+    grid-column: 1;
+  }
+  footer {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem;
   }
 }
